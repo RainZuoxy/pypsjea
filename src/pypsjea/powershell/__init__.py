@@ -108,7 +108,7 @@ class BasePowerShell:
             raise AuthenticationFailure(error.args[0])
         except Exception:
             raise Exception("Unexpected error happens on powershell command")
-          
+
     def execute_jea_cmd(
             self,
             cmds: list[CommandItem],
@@ -142,7 +142,7 @@ class BasePowerShell:
             raise AuthenticationFailure(error.args[0])
         except Exception:
             raise Exception("Unexpected error happens on powershell command")
-          
+
     def handle_powershell_error(self, powershell: PowerShell, message: str):
         if not powershell.had_errors:
             return
